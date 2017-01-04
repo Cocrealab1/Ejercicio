@@ -16,4 +16,3 @@ module.exports = function(){
   //Devolver la instancia de conexion a Mongoose
   return db;
 };
-//bryan 
