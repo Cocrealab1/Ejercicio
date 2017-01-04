@@ -17,3 +17,14 @@ req.comentarioModelo.remove(function (err) {
    			 }
 	});
 }
+
+exports.ingresarInf = function(req,res,next){
+
+    var comentario = new comentarioModelo (req.body)
+    comentario.save(function(error, documento){
+      if(error){
+         res.send('Error al intentar guardar el comentario.');
+      }
+   });
+
+}
