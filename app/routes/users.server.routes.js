@@ -10,7 +10,7 @@ module.exports = function(app) {
     app.route('/guardarComentario')
     	.post(comentarios.ingresarInf)
     	.get(comentarios.obtenerInf)
-    	.delete(comentarios.eliminar.Inf)
+    	.delete(comentarios.eliminarInf)
 
     app.get('/hola',function(req, res){
       res.send('hola')
