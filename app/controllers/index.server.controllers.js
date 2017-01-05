@@ -13,4 +13,3 @@ exports.render = function (req, res){
     title:'hola Mundo'
   })
 };
-// yo federico
