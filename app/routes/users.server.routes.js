@@ -8,11 +8,15 @@ var comentarios = require('../../app/controllers/users.server.controllers');
 module.exports = function(app) {
     //Configura la ruta base para 'users'
     app.route('/guardarComentario')
-    	.post(comentarios.ingresarInf)
-    	.get(comentarios.obtenerInf)
-    	.delete(comentarios.eliminarInf)
+    	.post(comentarios.ingresarInf);
+    	
+
+    app.route('/ver')
+    
+    	.get(comentarios.obtenerInf);
+    	
 
     app.get('/hola',function(req, res){
-      res.send('hola')
+      res.send('hola');
     })
-};
+}
