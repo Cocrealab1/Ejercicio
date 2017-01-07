@@ -8,13 +8,15 @@ var comentarioModelo = require('mongoose').model('comentarios');
 
 exports.obtenerInf = function(req,res,next){
     
-    comentarioModelo.find({},function(err){
+    comentarioModelo.find({},'comentario',function(err, doc){
       if(err){
          res.send('Error al intentar guardar el comentario.');
       }
-      else{res.json(comentario)}
+      else{res.json(doc);
+      }
 
-})}
+})//.select('comentario');
+  }
 
 exports.eliminarInf = function(req,res,next,id){
 
@@ -33,7 +35,9 @@ exports.ingresarInf = function(req,res,next){
       if(err){
          res.send('Error al intentar guardar el comentario.');
       }
-      else{res.json(comentario)}
-   });
+      else{
+        res.json(comentario);
+      }
+   })
 
 }
